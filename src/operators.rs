@@ -94,6 +94,7 @@ pub fn swiglu(y: &mut Tensor<f32>, x: &Tensor<f32>) {
         let silu = x_data[i] / (1.0 + (-x_data[i]).exp());
         y_data[i] *= silu;
     }
+    
 }
 
 // C = beta * C + alpha * A @ B^T
